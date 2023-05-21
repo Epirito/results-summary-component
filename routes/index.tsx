@@ -40,7 +40,7 @@ export default function Home() {
                   </li>
                 ))}
             </ul>
-            <button type='button' class="bg-gray-600 hover:bg-gradient-to-t active:bg-gradient-to-t hover:from-indigo-800 active:from-indigo-800 hover:to-indigo-700 text-white w-full py-3 rounded-full">Continue</button>
+            <button type='button' class="transition ease-in-out bg-gray-600 hover:bg-gradient-to-t hover:from-indigo-800 hover:to-indigo-700 text-white w-full py-3 rounded-full">Continue</button>
           </section>
         {/*
           <img
@@ -55,7 +55,11 @@ export default function Home() {
           <Counter start={3} />
         */}
         </div>
+        <div class="attribution bottom-0 absolute">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class='text-blue-300'>Frontend Mentor</a>.
+        </div>
       </div>
+      
     </>
   );
 }
