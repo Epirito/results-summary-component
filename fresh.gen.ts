@@ -5,21 +5,31 @@
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/joke.ts";
-import * as $2 from "./routes/index.tsx";
-import * as $3 from "./routes/intro-section-with-dropdown-navigation.tsx";
-import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/DropdownNavigation.tsx";
+import * as $2 from "./routes/ecommerce-product-page.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $4 from "./routes/intro-section-with-dropdown-navigation.tsx";
+import * as $5 from "./routes/results-summary-component.tsx";
+import * as $$0 from "./islands/AddToCart.tsx";
+import * as $$1 from "./islands/BottomLineMenu.tsx";
+import * as $$2 from "./islands/Counter.tsx";
+import * as $$3 from "./islands/DropdownNavigation.tsx";
+import * as $$4 from "./islands/LightBox.tsx";
 
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
     "./routes/api/joke.ts": $1,
-    "./routes/index.tsx": $2,
-    "./routes/intro-section-with-dropdown-navigation.tsx": $3,
+    "./routes/ecommerce-product-page.tsx": $2,
+    "./routes/index.tsx": $3,
+    "./routes/intro-section-with-dropdown-navigation.tsx": $4,
+    "./routes/results-summary-component.tsx": $5,
   },
   islands: {
-    "./islands/Counter.tsx": $$0,
-    "./islands/DropdownNavigation.tsx": $$1,
+    "./islands/AddToCart.tsx": $$0,
+    "./islands/BottomLineMenu.tsx": $$1,
+    "./islands/Counter.tsx": $$2,
+    "./islands/DropdownNavigation.tsx": $$3,
+    "./islands/LightBox.tsx": $$4,
   },
   baseUrl: import.meta.url,
   config,

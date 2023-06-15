@@ -11,7 +11,7 @@ export default function Dropdown({title, children}: {title: string, children: Co
     const setFalse = ()=>{setHover(false)}
     return (
         <div class="relative" onMouseLeave={setFalse}>
-            <button class={`flex items-center gap-1 font-semibold ${hover ? "text-black" : "text-gray-500"}`} onfocusin={setTrue} onfocusout={setFalse} onMouseEnter={setTrue}>{title} <img src={`/intro-dropdown/icon-arrow-${hover ? "up" : "down"}.svg`}/></button>
+            <button class={`cursor-default flex items-center gap-1 font-semibold ${hover ? "text-black" : "text-gray-500"}`} onfocusin={setTrue} onfocusout={setFalse} onMouseEnter={setTrue}>{title} <img class="w-2" src={`/intro-dropdown/icon-arrow-${hover ? "up" : "down"}.svg`}/></button>
             <div class={`absolute bg-white shadow-xl p-4 rounded-xl ${hover ? "" : "hidden"}`}>
                 {children}
             </div>

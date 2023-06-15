@@ -17,7 +17,7 @@ export default function DropdownNavigation() {
                 <button class="text-gray-500 font-semibold">Blog</button>
             </div>
         </Dropdown>
-        <button class="font-semibold text-gray-500 hover:text-black">Careers</button>
-        <button class="font-semibold text-gray-500 hover:text-black">About</button>
+        <a href="" class="font-semibold text-gray-500 hover:text-black">Careers</a>
+        <a href="" class="font-semibold text-gray-500 hover:text-black">About</a>
     </div>)
 }
