@@ -12,7 +12,7 @@ export default function IntroSectionWithDropdownNavigation() {
                     <nav class="invisible sm:visible flex sm:flex-row items-center justify-between">
                         <div class="flex space-x-6">
                             <a href=""><img class="w-20" src="/intro-dropdown/logo.svg"/></a>
-                            <DropdownNavigation/>
+                            <DropdownNavigation />
                         </div>
                         <div class="flex space-x-4">
                             <a href="" class="text-gray-500 py-1 font-semibold hover:text-black">Login</a>

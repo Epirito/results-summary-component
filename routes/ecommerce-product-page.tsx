@@ -1,22 +1,14 @@
-import BottomLineMenu from "../islands/BottomLineMenu.tsx";
+
 
 import AddToCart from "../islands/AddToCart.tsx";
 import LightBox from "../islands/LightBox.tsx";
+import EcommerceNav from "../islands/EcommerceNav.tsx";
 
 export default function EcommerceProductPage() {
     return (
         <div class="h-screen box-content">
-            <div class="px-2 py-2 h-full flex flex-col">
-                <nav class="flex justify-between items-start">
-                    <div class="flex items-start gap-8">
-                        <a href=""><img src="/ecommerce/logo.svg"/></a>
-                        <BottomLineMenu names={['Collections', 'Men', 'Women', 'About', 'Contact']}/>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <button class="w-11 h-11 flex justify-center items-center"><img src="/ecommerce/icon-cart.svg" style={{outline: 'none'}}/></button>
-                        <button class="rounded-full w-11 h-11 flex justify-center items-center" style={{outline: 'none', backgroundColor: 'hsl(26, 100%, 55%)'}}><img class="w-10" src="/ecommerce/image-avatar.png"/></button>
-                    </div>
-                </nav>
+            <div class="px-8 py-8 h-full flex flex-col">
+                <EcommerceNav/>
                 <div class="h-full flex flex-col justify-center">
                     <main class="flex mx-32 space-x-10 justify-center">
                         <LightBox images={[1,2,3,4].map(n=>`/ecommerce/image-product-${n}.jpg`)} thumbnails={[1,2,3,4].map(n=>`/ecommerce/image-product-${n}-thumbnail.jpg`)}/>
