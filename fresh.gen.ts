@@ -9,11 +9,9 @@ import * as $2 from "./routes/ecommerce-product-page.tsx";
 import * as $3 from "./routes/index.tsx";
 import * as $4 from "./routes/intro-section-with-dropdown-navigation.tsx";
 import * as $5 from "./routes/results-summary-component.tsx";
-import * as $$0 from "./islands/AddToCart.tsx";
-import * as $$1 from "./islands/Counter.tsx";
-import * as $$2 from "./islands/DropdownNavigation.tsx";
-import * as $$3 from "./islands/EcommerceNav.tsx";
-import * as $$4 from "./islands/LightBox.tsx";
+import * as $$0 from "./islands/Counter.tsx";
+import * as $$1 from "./islands/DropdownNavigation.tsx";
+import * as $$2 from "./islands/Ecommerce.tsx";
 
 const manifest = {
   routes: {
@@ -25,11 +23,9 @@ const manifest = {
     "./routes/results-summary-component.tsx": $5,
   },
   islands: {
-    "./islands/AddToCart.tsx": $$0,
-    "./islands/Counter.tsx": $$1,
-    "./islands/DropdownNavigation.tsx": $$2,
-    "./islands/EcommerceNav.tsx": $$3,
-    "./islands/LightBox.tsx": $$4,
+    "./islands/Counter.tsx": $$0,
+    "./islands/DropdownNavigation.tsx": $$1,
+    "./islands/Ecommerce.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

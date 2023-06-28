@@ -34,6 +34,7 @@ export default function EcommerceDropdown({title, innerClassName, children}: {ti
     return (
         <div className="relative" onMouseLeave={setFalse}>
             <button
+                style={{outline: 'none'}}
                 className={`cursor-default flex items-center gap-1 font-semibold ${delayed ? "text-black" : "text-gray-500"}`}
                 onFocus={setTrue} 
                 onBlur={setFalse} 

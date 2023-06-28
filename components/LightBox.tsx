@@ -20,8 +20,7 @@ function Menu({thumbnails, current, setCurrent, hovering, setHovering}: {thumbna
 </div>
 }
 
-export default function LightBox({images, thumbnails}: {images: string[], thumbnails: string[]}) {
-    const [current, setCurrent] = useState(0)
+export default function LightBox({images, thumbnails, current, setCurrent}: {images: string[], thumbnails: string[], current: number, setCurrent: (input: number|((old:number)=>number))=>void}) {
     const dialogRef = useRef(null as HTMLDialogElement | null)
     const [full, setFull] = useState(false)
     const [hovering, setHovering] = useState(null as number | null)
@@ -30,8 +29,10 @@ export default function LightBox({images, thumbnails}: {images: string[], thumbn
             background: 'rgba(0, 0, 0, .75)'
         }
     })
-    return <div class="flex flex-col gap-3 w-80">
-        <button style={{outline: 'none'}} class="rounded-lg" onClick={()=>{dialogRef.current!.showModal()}}><img class="rounded-lg transition-opacity ease-in-out duration-250 hover:opacity-50" src={images[hovering ?? current]}/></button>
+    return <div class="flex flex-col gap-3 w-80 hidden md:block">
+        <button style={{outline: 'none'}} class="rounded-lg" onClick={()=>{dialogRef.current!.showModal()}}>
+            <img class="rounded-lg transition-opacity ease-in-out duration-250 hover:opacity-50" src={images[hovering ?? current]}/>
+        </button>
         <Menu thumbnails={thumbnails} current={current} setCurrent={setCurrent} hovering={hovering} setHovering={setHovering}/>
     <dialog ref={dialogRef} class={tw`bg-transparent overflow-hidden fixed ${backdrop}`}>
         <div class="flex flex-col h-screen justify-start items-center">
@@ -42,7 +43,7 @@ export default function LightBox({images, thumbnails}: {images: string[], thumbn
             </div>
             <div class="flex items-center justify-center">
                 <ImgButton 
-                    style={{outline:'none', marginRight: -10}} 
+                    style={{outline:'none', marginRight: -20}} 
                     class={tw`w-10 h-10 z-10 rounded-full bg-white flex justify-center items-center`}
                     onClick={()=>{setCurrent(c=>(c-1+images.length) % images.length)}}
                     imgClass="w-2 h-3"
@@ -51,7 +52,7 @@ export default function LightBox({images, thumbnails}: {images: string[], thumbn
                 />
                 <img class="rounded-lg w-2/5" src={images[hovering ?? current]}/>
                 <ImgButton 
-                    style={{outline:'none', marginLeft: -10}} 
+                    style={{outline:'none', marginLeft: -20}} 
                     class="w-10 h-10 z-10 rounded-full bg-white flex justify-center items-center"
                     onClick={()=>{setCurrent(c=>(c+1) % images.length)}}
                     imgClass="w-2 h-3"

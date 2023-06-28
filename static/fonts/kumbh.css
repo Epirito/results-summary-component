@@ -1,0 +1,8 @@
+* {
+    font-family: "Kumbh Sans";
+}
+
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("/fonts/KumbhSans-VariableFont_wght.ttf");
+}

@@ -3,6 +3,7 @@ import { useState } from "preact/hooks"
 export default function Avatar({src}: {src: string}) {
     const [hover, setHover] = useState(false)
     return <button 
+        style={{outline: 'none'}}
         onMouseEnter={()=>{setHover(true)}} 
         onMouseLeave={()=>{setHover(false)}} 
         class="w-11 h-11 flex justify-center items-center" 
