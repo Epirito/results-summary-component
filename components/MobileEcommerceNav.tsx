@@ -1,5 +1,6 @@
 import Avatar from "./Avatar.tsx";
 import Cart from "./Cart.tsx";
+import MobileMenu from "./MobileMenu.tsx";
 
 export default function MobileEcommerceNav({
   cart,
@@ -17,9 +18,11 @@ export default function MobileEcommerceNav({
   return (
     <nav class="p-3 flex justify-between items-center md:hidden">
       <div class="flex items-center gap-6">
-        <button style={{ outline: "none" }}>
-          <img class="h-4" src="/ecommerce/icon-menu.svg" />
-        </button>
+        <MobileMenu
+          src="/ecommerce/icon-menu.svg"
+          names={["Collections", "Men", "Women", "About", "Contact"]}
+        />
+
         <a href="">
           <img class="w-32" src="/ecommerce/logo.svg" />
         </a>
