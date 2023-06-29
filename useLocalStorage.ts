@@ -1,7 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 
 export default function useLocalStorage<T>(key: string, initialValue: T) {
-  if (Deno.env.get("DENO_DEPLOYMENT_ID") !== undefined) {
+  if (globalThis["localStorage"] === undefined) {
     return [initialValue, (_: T) => {}] as const;
   }
   const [value, setValue] = useState(() => {
