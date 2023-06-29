@@ -1,4 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
+import FrontendMentorAttribution from "../components/FrontendMentorAttribution.tsx";
 
 export default function ResultsSummaryComponent() {
   const data: [string, number, string][] = [
@@ -79,16 +80,7 @@ export default function ResultsSummaryComponent() {
         */
           }
         </div>
-        <div class="attribution bottom-0 fixed">
-          Challenge by{" "}
-          <a
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            class="text-blue-300"
-          >
-            Frontend Mentor
-          </a>.
-        </div>
+        <FrontendMentorAttribution />
       </div>
     </>
   );

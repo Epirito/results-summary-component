@@ -1,4 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
+import FrontendMentorAttribution from "../components/FrontendMentorAttribution.tsx";
 import DropdownNavigation from "../islands/DropdownNavigation.tsx";
 
 export default function IntroSectionWithDropdownNavigation() {
@@ -90,12 +91,7 @@ export default function IntroSectionWithDropdownNavigation() {
           />
         </main>
       </div>
-      <div class="bottom-0 fixed bg-white text-sm">
-        Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>. Coded by <a href="#">Your Name Here</a>.
-      </div>
+      <FrontendMentorAttribution />
     </>
   );
 }
