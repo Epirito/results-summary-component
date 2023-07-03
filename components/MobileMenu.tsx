@@ -1,12 +1,13 @@
+import { ComponentChildren } from "preact";
 import { useState } from "preact/hooks";
 export default function MobileMenu(
-  { names, links, src }: {
-    names: string[];
+  { children, src, right }: {
     src: string;
-    links?: string[];
+    children: ComponentChildren;
+    right?: boolean;
   },
 ) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <button
@@ -30,34 +31,34 @@ export default function MobileMenu(
             setOpen(false);
           }}
         >
-          <div
-            style={{
+        </div>
+
+        <div
+          style={!right
+            ? {
               width: 210,
               left: open ? 0 : -210,
+              top: 0,
               transition: "left 0.25s ease-in-out",
+            }
+            : {
+              width: 210,
+              right: open ? 0 : -210,
+              top: 0,
+              transition: "right 0.25s ease-in-out",
             }}
-            class={`flex flex-col z-20 gap-6 ${
-              open ? "p-6" : ""
-            } fixed h-full bg-white md:hidden`}
+          class={`flex flex-col z-20 gap-6 p-6 fixed h-screen bg-white md:hidden`}
+        >
+          <button
+            style={{ outline: "none" }}
+            onClick={() => {
+              setOpen(false);
+              return;
+            }}
           >
-            {open
-              ? (
-                <>
-                  <button
-                    style={{ outline: "none" }}
-                    onClick={() => {
-                      setOpen(false);
-                      return;
-                    }}
-                  >
-                    <img src="/ecommerce/icon-close.svg" class="w-4" />
-                  </button>
-                  {names?.map((name, i) => <a href={links?.[i] ?? ""}>{name}
-                  </a>)}
-                </>
-              )
-              : null}
-          </div>
+            <img src="/ecommerce/icon-close.svg" class="w-4" />
+          </button>
+          {children}
         </div>
       </>
     </>

@@ -18,11 +18,11 @@ export default function MobileEcommerceNav({
   return (
     <nav class="p-3 flex justify-between items-center md:hidden">
       <div class="flex items-center gap-6">
-        <MobileMenu
-          src="/ecommerce/icon-menu.svg"
-          names={["Collections", "Men", "Women", "About", "Contact"]}
-        />
-
+        <MobileMenu src="/ecommerce/icon-menu.svg" right={true}>
+          {["Collections", "Men", "Women", "About", "Contact"].map((
+            name,
+          ) => <a href={""}>{name}</a>)}
+        </MobileMenu>
         <a href="">
           <img class="w-32" src="/ecommerce/logo.svg" />
         </a>

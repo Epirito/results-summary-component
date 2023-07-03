@@ -10,8 +10,8 @@ import * as $3 from "./routes/index.tsx";
 import * as $4 from "./routes/intro-section-with-dropdown-navigation.tsx";
 import * as $5 from "./routes/results-summary-component.tsx";
 import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/DropdownNavigation.tsx";
-import * as $$2 from "./islands/Ecommerce.tsx";
+import * as $$1 from "./islands/Ecommerce.tsx";
+import * as $$2 from "./islands/IntroSectionWithDropdownNavigationIsland.tsx";
 
 const manifest = {
   routes: {
@@ -24,8 +24,8 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $$0,
-    "./islands/DropdownNavigation.tsx": $$1,
-    "./islands/Ecommerce.tsx": $$2,
+    "./islands/Ecommerce.tsx": $$1,
+    "./islands/IntroSectionWithDropdownNavigationIsland.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,
